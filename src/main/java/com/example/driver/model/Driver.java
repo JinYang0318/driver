@@ -4,20 +4,20 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@EqualsAndHashCode
+@Table(name = "DRIVER")
 @Setter
 @Getter
-@Table(name = "DRIVER")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@EqualsAndHashCode
 public class Driver {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name")
+    @Column(name = "driver_name")
     private String name;
 
     @Column(name = "license_number")
